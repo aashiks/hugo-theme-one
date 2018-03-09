@@ -1,14 +1,73 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather');
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC');
+
+/* fira-mono-regular - cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext */
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/fira-mono-v6-cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext-regular.eot'); /* IE9 Compat Modes */
+  src: local('Fira Mono Regular'), local('FiraMono-Regular'),
+       url('../fonts/fira-mono-v6-cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/fira-mono-v6-cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/fira-mono-v6-cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/fira-mono-v6-cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/fira-mono-v6-cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext-regular.svg#FiraMono') format('svg'); /* Legacy iOS */
+}
+
+/* fira-mono-500 - cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext */
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/fira-mono-v6-cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext-500.eot'); /* IE9 Compat Modes */
+  src: local('Fira Mono Medium'), local('FiraMono-Medium'),
+       url('../fonts/fira-mono-v6-cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/fira-mono-v6-cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/fira-mono-v6-cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext-500.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/fira-mono-v6-cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/fira-mono-v6-cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext-500.svg#FiraMono') format('svg'); /* Legacy iOS */
+}
+
+/* fira-mono-700 - cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext */
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/fira-mono-v6-cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext-700.eot'); /* IE9 Compat Modes */
+  src: local('Fira Mono Bold'), local('FiraMono-Bold'),
+       url('../fonts/fira-mono-v6-cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/fira-mono-v6-cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/fira-mono-v6-cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/fira-mono-v6-cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/fira-mono-v6-cyrillic_greek-ext_greek_latin_latin-ext_cyrillic-ext-700.svg#FiraMono') format('svg'); /* Legacy iOS */
+}
+
+/* inconsolata-regular - latin_latin-ext */
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inconsolata-v16-latin_latin-ext-regular.eot'); /* IE9 Compat Modes */
+  src: local('Inconsolata Regular'), local('Inconsolata-Regular'),
+       url('../fonts/inconsolata-v16-latin_latin-ext-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/inconsolata-v16-latin_latin-ext-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/inconsolata-v16-latin_latin-ext-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/inconsolata-v16-latin_latin-ext-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/inconsolata-v16-latin_latin-ext-regular.svg#Inconsolata') format('svg'); /* Legacy iOS */
+}
 
 body, li p {
-	font-family: 'Merriweather', serif;
+	/* font-family: 'Merriweather', serif; */
+    font-family: 'Fira Mono', normal;
+    
 }
 
 h1,h2,h3,h4,h5,h6,header,header.a {
-	text-transform: lowercase;
-	font-family: 'Alegreya Sans SC', sans-serif;
+    line-height: 1.2;
+	/* text-transform: lowercase; */
+	font-family: 'Inconsolata', normal;
+    padding-bottom: 15px;
 }
+
 
 header,header.a{
 	font-weight: bold;
@@ -16,7 +75,7 @@ header,header.a{
 
 @media all {
 	html {
-		font-size: 18px;
+		font-size: 15px;
 	}
 	body > * {
 		font-size: 100%;
@@ -142,7 +201,11 @@ ul,ol {
 li {
 	line-height: 1.75em;
 	margin-left: 0.75em;
-	list-style-type: none;
+/*	list-style-type: none; */
+}
+
+li a {
+	color: #FF4136; /* #0366d6; */
 }
 
 
@@ -198,7 +261,7 @@ div.nav a:active div {
 }
 
 a:active { 
-	color: #777; 
+	color: #FF4136; /*#777; */
 }
 
 a:hover {
@@ -212,7 +275,7 @@ a:hover {
 }
 
 p a {
-	color: #0366d6;
+	color: #FF4136; /* #0366d6; */
 }
 
 code {
